@@ -1,0 +1,37 @@
+#buttons{
+    background-color: #813B16;
+    color: #EFF3F6;
+}
+.search{
+    margin-top: 40px;
+}
+.search form{
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+.search form .form-control{
+    border-color: #813B16;
+    color: #813B16;
+    background-color: inherit;
+}
+#form-group{
+    width: 90%;
+}
+.yards{
+    background-image: url(../../assets/images/trimed.jpg);
+    background-size: 100% 100%;
+    min-height: 400px;
+    position: relative;
+}
+#buttons,.form-control{
+    height: 45px;
+}
+.darkbgs{
+    background-color: rgba(31,31,31,0.2);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left:0;
+    bottom:0;
+}
