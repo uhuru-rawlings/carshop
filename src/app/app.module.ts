@@ -7,12 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ContactComponent } from './contact/contact.component';
+import { YardComponent } from './yard/yard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingLinks,
-    NavbarComponent
+    NavbarComponent,
+    ContactComponent,
+    YardComponent
   ],
   imports: [
     BrowserModule,

@@ -4,3 +4,9 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
+body{
+    overflow-x: hidden;
+}
+#subtitles{
+    font-weight: bold;
+}

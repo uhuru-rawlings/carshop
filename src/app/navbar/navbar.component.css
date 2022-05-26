@@ -1,1 +1,11 @@
 /* #813B16 */
+nav{
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+nav a button{
+    font-size: 20px;
+    color: #813B16;
+    color: #EFF3F6;
+}

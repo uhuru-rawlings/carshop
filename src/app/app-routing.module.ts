@@ -4,6 +4,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ContactComponent } from './contact/contact.component';
+import { YardComponent } from './yard/yard.component';
 
 
 const routes: Routes = [
@@ -11,6 +13,8 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'resetpassword',component:ResetpasswordComponent},
+  {path:'contact',component:ContactComponent},
+  {path:'yard',component:YardComponent},
 ];
 
 @NgModule({
@@ -19,4 +23,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingLinks = [LoginComponent,SignupComponent,ResetpasswordComponent,HomepageComponent]
+export const routingLinks = [LoginComponent,SignupComponent,ResetpasswordComponent,HomepageComponent,ContactComponent,YardComponent]

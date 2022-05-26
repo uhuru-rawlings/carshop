@@ -15,4 +15,60 @@
 .whitebackground .container h1{
     font-weight: bold;
     font-size: 4em;
+    margin-top: 10%;
+}
+.buttons{
+    margin-top: 15px;
+}
+.buttons a button{
+    color: #EFF3F6;
+    background-color: #813B16;
+    font-size: 20px;
+    border: 2px solid #813B16;
+    transition: 2s;
+}
+.buttons a button:hover{
+    color: #813B16;
+    background-color: inherit;
+    border: 2px solid #813B16;
+}
+.flex_howto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.easybuy,.easypay, .easyuse{
+    width: 280px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: 2s;
+}
+.easybuy:hover,.easypay:hover,.easyuse:hover{
+    box-shadow: 4px 4px 8px rgba(31,31,31,0.1);
+    background-color: #fafbfc;
+}
+.services{
+    margin-top: 30px;
+}
+.flex_cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.flex_cards .card{
+    width: 250px;
+    padding: 50px 15px 50px 15px;
+    border:none;
+    box-shadow: 4px 4px 8px rgba(31,31,31,0.1);
+    background-color: #fafbfc;
+}
+.seeemore{
+    text-align: right;
+}
+.seeemore a{
+    color: #813B16;
+    text-decoration:none;
 }
