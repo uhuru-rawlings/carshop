@@ -7,5 +7,9 @@ nav{
 nav a button{
     font-size: 20px;
     color: #813B16;
-    color: #EFF3F6;
+    font-weight: 700;
+    /* color: #EFF3F6; */
+}
+#logins{
+    border:2px solid #813B16;
 }
