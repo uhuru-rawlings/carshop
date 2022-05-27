@@ -1,1 +1,29 @@
-<p>contact works!</p>
+<div class="contactspage">
+    <div class="container">
+        <app-navbar></app-navbar>
+        <div class="flex_contacts">
+            <div class="contact_links">
+                <p>Fill the form to send message. our team will get back to you as quick as posible.</p>
+            </div>
+            <div class="contact_form">
+                <form method="post" autocomplete="off">
+                    <div class="form-group">
+                        <label for="username">username<sup class="text-danger">*</sup></label>
+                        <input type="text" name="username" id="username" class="form-control shadow-none" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                        <label for="useremail">useremail<sup class="text-danger">*</sup></label>
+                        <input type="email" name="useremail" id="useremail" class="form-control shadow-none" placeholder="Enter useremail">
+                    </div>
+                    <div class="form-group">
+                        <label for="messages">message<sup class="text-danger">*</sup></label>
+                        <textarea name="messages" id="messages" cols="30" rows="10" class="form-control shadow-none"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="send message" class="bn shadow-none" id="buttons">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

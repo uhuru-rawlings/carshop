@@ -1,0 +1,16 @@
+.flex_contacts{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.contact_links,.contact_form{
+    width: 50%;
+    height: 100%;
+}
+.contactspage{
+    height: 100vh;
+    background-color: #fafbfc;
+}
+.form-group{
+    margin-bottom: 15px;
+}
