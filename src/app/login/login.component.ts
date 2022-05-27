@@ -16,6 +16,11 @@ export class LoginComponent implements OnInit {
   validateLogin(){
     if(this.useremails === '' || this.passwords === ''){
       this.toastr.error("username and password required to login.")
+    }else{
+      let details:any= {
+        'useremail':this.useremails,
+        'passwords':this.passwords
+      }
     }
   }
 }

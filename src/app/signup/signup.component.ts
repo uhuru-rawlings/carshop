@@ -17,6 +17,12 @@ export class SignupComponent implements OnInit {
   validateLogin(){
     if(this.useremails === '' || this.passwords === '' || this.username === ''){
       this.toastr.error("please fill in the required details.")
+    }else{
+      let details:any= {
+        'username':this.username,
+        'useremail':this.useremails,
+        'passwords':this.passwords
+      }
     }
   }
 }
