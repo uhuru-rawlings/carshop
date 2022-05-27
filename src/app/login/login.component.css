@@ -1,0 +1,18 @@
+.carshoplogin{
+    display: flex;
+}
+.carimagesside{
+    width: 50%;
+    height: 100%;
+    background-image: url(../../assets/images/trimed.jpg);
+    background-size: 100% 100%;
+}
+.loginforms{
+    width: 50%;
+}
+#buttons{
+    color: #EFF3F6;
+    background-color: #813B16;
+    font-size: 20px;
+    border: 2px solid #813B16;
+}
