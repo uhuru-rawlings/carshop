@@ -1,14 +1,29 @@
 .carshoplogin{
     display: flex;
+    height: 100vh;
+    align-items: center;
 }
 .carimagesside{
-    width: 50%;
+    width: 60%;
     height: 100%;
-    background-image: url(../../assets/images/trimed.jpg);
+    background-image: url(../../assets/images/background.jpg);
     background-size: 100% 100%;
 }
 .loginforms{
-    width: 50%;
+    width: 40%;
+}
+.loginforms form{
+    width: 70%;
+    margin: auto;
+}
+.loginforms form .form-group{
+    margin-bottom: 10px;
+}
+.loginforms form .form-control{
+    border-radius: 0;
+    outline: none !important;
+    border: none;
+    border-bottom: 2px solid #813B16;
 }
 #buttons{
     color: #EFF3F6;

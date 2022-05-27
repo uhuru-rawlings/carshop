@@ -1,1 +1,26 @@
-<p>signup works!</p>
+<div class="carshoplogin">
+    <div class="carimagesside"></div>
+    <div class="loginforms">
+        <form autocomplete="off" method="post">
+            <div class="form-group">
+                <label for="useremails">username</label>
+                <input type="text" [(ngModel)]="username" name="username" id="username" class="form-control shadow-none" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <label for="useremails">useremail</label>
+                <input type="email" [(ngModel)]="useremails" name="useremails" id="useremails" class="form-control shadow-none" placeholder="Enter useremail">
+            </div>
+            <div class="form-group">
+                <label for="passwords">password</label>
+                <input type="password" [(ngModel)]="passwords" name="passwords" id="passwords" class="form-control shadow-none" placeholder="Enter password">
+            </div>
+            <div class="form-group">
+                <a routerLink="/resetpassword">forget password?</a>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="LogIn" (click)="validateLogin()" class="btn shadow-none" id="buttons">
+            </div>
+            <p>Dont have account? <a routerLink="/signup">signup</a></p>
+        </form>
+    </div>
+</div>
