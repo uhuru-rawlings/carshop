@@ -7,7 +7,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  username:any = '';
+  phonenumber:any = '';
   useremail:any = '';
   messages:any = '';
   constructor(private toastr:ToastrService) { }
@@ -15,9 +15,15 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
   validateContact(){
-    if(this.username === '' || this.useremail === ''|| this.messages === ''){
+    if(this.phonenumber === '' || this.useremail === ''|| this.messages === ''){
       this.toastr.error("please fill all required fields.")
       
+    }else{
+      let details:any = {
+          'useremail': this.useremail,
+          'phonenumber': this.phonenumber,
+          'message':this.messages
+      }
     }
   }
 }
