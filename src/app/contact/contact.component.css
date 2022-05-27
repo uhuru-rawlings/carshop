@@ -14,3 +14,17 @@
 .form-group{
     margin-bottom: 15px;
 }
+#messages{
+    height: 100px;
+    resize: none;
+}
+p a{
+    text-decoration: none;
+    color: rgb(87, 84, 84);
+}
+#buttons{
+    color: #EFF3F6;
+    background-color: #813B16;
+    font-size: 20px;
+    border: 2px solid #813B16;
+}

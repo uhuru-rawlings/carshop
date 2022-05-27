@@ -28,7 +28,8 @@
     height: 45px;
 }
 .darkbgs{
-    background-color: rgba(31,31,31,0.2);
+    /* background-color: rgba(31,31,31,0.2); */
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.9),rgba(255,255,255,0.1));
     position: absolute;
     top: 0;
     right: 0;
