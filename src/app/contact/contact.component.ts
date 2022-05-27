@@ -14,5 +14,10 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  validateContact(){
+    if(this.username === '' || this.useremail === ''|| this.messages === ''){
+      this.toastr.error("please fill all required fields.")
+      
+    }
+  }
 }

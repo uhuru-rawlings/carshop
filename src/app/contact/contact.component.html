@@ -12,18 +12,18 @@
                 <form method="post" autocomplete="off">
                     <div class="form-group">
                         <label for="username">username<sup class="text-danger">*</sup></label>
-                        <input type="text" name="username" required id="username" class="form-control shadow-none" placeholder="Enter username">
+                        <input type="text" [(ngModel)]="username" name="username" required id="username" class="form-control shadow-none" placeholder="Enter username">
                     </div>
                     <div class="form-group">
                         <label for="useremail">useremail<sup class="text-danger">*</sup></label>
-                        <input type="email" name="useremail" required id="useremail" class="form-control shadow-none" placeholder="Enter useremail">
+                        <input type="email" [(ngModel)]="useremail" name="useremail" required id="useremail" class="form-control shadow-none" placeholder="Enter useremail">
                     </div>
                     <div class="form-group">
                         <label for="messages">message<sup class="text-danger">*</sup></label>
-                        <textarea name="messages" id="messages" required cols="30" rows="10" class="form-control shadow-none"></textarea>
+                        <textarea name="messages" [(ngModel)]="messages" id="messages" required cols="30" rows="10" class="form-control shadow-none"></textarea>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="send message" class="btn shadow-none" id="buttons">
+                        <input type="submit" (click)="validateContact()" value="send message" class="btn shadow-none" id="buttons">
                     </div>
                 </form>
             </div>
