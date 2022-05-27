@@ -17,7 +17,6 @@ export class ContactComponent implements OnInit {
   validateContact(){
     if(this.phonenumber === '' || this.useremail === ''|| this.messages === ''){
       this.toastr.error("please fill all required fields.")
-      
     }else{
       let details:any = {
           'useremail': this.useremail,
