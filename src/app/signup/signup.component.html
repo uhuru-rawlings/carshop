@@ -2,6 +2,7 @@
     <div class="carimagesside"></div>
     <div class="loginforms">
         <form autocomplete="off" method="post">
+            <h4 class="text-center">Create Account</h4>
             <div class="form-group">
                 <label for="useremails">username</label>
                 <input type="text" [(ngModel)]="username" name="username" id="username" class="form-control shadow-none" placeholder="Enter username">
@@ -15,7 +16,7 @@
                 <input type="password" [(ngModel)]="passwords" name="passwords" id="passwords" class="form-control shadow-none" placeholder="Enter password">
             </div>
             <div class="form-group">
-                <input type="submit" value="LogIn" (click)="validateLogin()" class="btn shadow-none" id="buttons">
+                <input type="submit" value="create account" (click)="validateLogin()" class="btn shadow-none" id="buttons">
             </div>
             <p>Already have account? <a routerLink="/login">login</a></p>
         </form>
