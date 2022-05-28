@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { ContactService } from '../services/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +11,8 @@ export class ContactComponent implements OnInit {
   phonenumber:any = '';
   useremail:any = '';
   messages:any = '';
-  constructor(private toastr:ToastrService) { }
+  success:any =''
+  constructor(private toastr:ToastrService, private contactservice:ContactService) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +25,14 @@ export class ContactComponent implements OnInit {
           'phonenumber': this.phonenumber,
           'message':this.messages
       }
+      this.contactservice.contactUs(details).subscribe((data) => {
+        if(data.success){
+          this.success = data.success
+          this.phonenumber = ''
+          this.useremail = ''
+          this.messages = ''
+        }
+      })
     }
   }
 }

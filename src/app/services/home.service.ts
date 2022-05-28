@@ -5,11 +5,11 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ContactService {
-  url:any = 'https://carapis.herokuapp.com/user/contacts/'
+export class HomeService {
+  url:any = 'https://carapis.herokuapp.com/cars/models/'
   constructor(private http:HttpClient) { }
 
-  contactUs(details:any):Observable<any>{
-    return this.http.post(this.url, details)
+  carModels():Observable<any>{
+    return this.http.get(this.url)
   }
 }

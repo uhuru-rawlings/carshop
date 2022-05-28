@@ -39,6 +39,16 @@
         <div class="seeemore"><a href="/yard">See More...</a></div>
     </div>
 </div>
+<div class="companies">
+    <div class="container">
+        <div class="card company" *ngFor="let model of models">
+            <div class="imageslogo">
+                <img src="https://res.cloudinary.com/dwvjgc2l0/image/upload/v1653731379/{{ model.modellogo }}" height="100%" width="100%" alt="">
+            </div>
+            <div class="comapnyname">{{ model.modelname }}</div>
+        </div>
+    </div>
+</div>
 <div class="testimonials">
     <div class="container">
         <div class="flex_cards">

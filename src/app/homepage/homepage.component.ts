@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from '../services/home.service';
 
 @Component({
   selector: 'app-homepage',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-
-  constructor() { }
+  models:any;
+  constructor(private homeservice:HomeService) { }
 
   ngOnInit(): void {
+    this.carModels()
   }
   
+
+  carModels(){
+    this.homeservice.carModels().subscribe((data) => {
+      this.models = data
+    })
+  }
 }
