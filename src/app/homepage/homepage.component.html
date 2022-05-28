@@ -37,15 +37,27 @@
 <div class="cars_few">
     <div class="container">
         <div class="seeemore"><a href="/yard">See More...</a></div>
+        <div class="car_cards">
+            <div class="card">
+                <div class="images">
+                    <img src="" height="100%" width="100%" alt="">
+                </div>
+                <div class="card-body">
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <div class="companies">
+    <h3 class="text-center" id="subtitles">Our Patners</h3>
     <div class="container">
         <div class="card company" *ngFor="let model of models">
             <div class="imageslogo">
-                <img src="https://res.cloudinary.com/dwvjgc2l0/image/upload/v1653731379/{{ model.modellogo }}" height="100%" width="100%" alt="">
+                <!-- <img src="https://res.cloudinary.com/dwvjgc2l0/image/upload/{{ model.modellogo }}" height="100%" width="100%" alt=""> -->
+                <img src="https://res.cloudinary.com/dwvjgc2l0/{{ model.modellogo }}" height="100%" width="100%" alt="">
             </div>
-            <div class="comapnyname">{{ model.modelname }}</div>
+            <div class="comapnyname text-center">{{ model.modelname }}</div>
         </div>
     </div>
 </div>

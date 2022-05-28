@@ -76,11 +76,21 @@
 }
 .imageslogo{
     height: 100px;
-    width:100px;
+    width:100%;
 }
 .companies .container{
     display: flex;
     flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.companies .container .card{
+    border: none;
+    min-width: 200px;
+}
+.car_cards{
+    display: flex;
+    justify-content: center;
     column-gap: 20px;
     row-gap: 20px;
 }
