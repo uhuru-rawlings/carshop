@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { ResetService } from '../services/reset.service';
 
 @Component({
   selector: 'app-resetpassword',
@@ -10,7 +11,9 @@ export class ResetpasswordComponent implements OnInit {
   useremails:any = ''
   cpasswords:any = ''
   passwords:any = ''
-  constructor(private toastr:ToastrService) { }
+  error:any =''
+  success:any = ''
+  constructor(private toastr:ToastrService,private reset:ResetService) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +29,13 @@ export class ResetpasswordComponent implements OnInit {
           'useremail':this.useremails,
           'passwords':this.passwords
         }
+        this.reset.restPassword(details).subscribe((data) =>{
+          if(data.success){
+            this.success = data.success
+          }else{
+            this.error = data.error
+          }
+        })
       }
     }
   }
