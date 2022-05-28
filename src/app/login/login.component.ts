@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { LoginService } from '../services/login.service';
+import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,7 +11,8 @@ import { ToastrService } from 'ngx-toastr';
 export class LoginComponent implements OnInit {
   useremails:any = ''
   passwords:any = ''
-  constructor(private toastr:ToastrService) { }
+  error:any=''
+  constructor(private toastr:ToastrService, private logins:LoginService, private router:Router, private cookie:CookieService) { }
 
   ngOnInit(): void {
   }
@@ -21,6 +25,14 @@ export class LoginComponent implements OnInit {
         'useremail':this.useremails,
         'passwords':this.passwords
       }
+      this.logins.loginUser(details).subscribe((data) => {
+        if(data.error){
+          this.error = data.error
+        }else{
+          this.cookie.set("jwttoken", JSON.stringify(data.token))
+          this.router.navigate(['/'])
+        }
+      })
     }
   }
 }

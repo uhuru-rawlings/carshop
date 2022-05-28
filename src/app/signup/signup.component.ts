@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { SignupService } from '../services/signup.service';
 
 @Component({
   selector: 'app-signup',
@@ -10,7 +11,9 @@ export class SignupComponent implements OnInit {
   useremails:any = ''
   username:any = ''
   passwords:any = ''
-  constructor(private toastr:ToastrService) { }
+  success:any = ''
+  error:any = ''
+  constructor(private toastr:ToastrService, private signupservice:SignupService) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +26,13 @@ export class SignupComponent implements OnInit {
         'useremail':this.useremails,
         'passwords':this.passwords
       }
+      this.signupservice.createUser(details).subscribe((data) =>{
+        if(data.success){
+          this.success = data.success
+        }else{
+          this.error = data.error
+        }
+      })
     }
   }
 }
