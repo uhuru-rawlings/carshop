@@ -28,3 +28,25 @@ p a{
     font-size: 20px;
     border: 2px solid #813B16;
 }
+form .form-control{
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #813B16;
+}
+.car_cards{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.car_cards .card{
+    min-width: 250px;
+}
+.car_cards .card .images{
+    width: 100%;
+    height: 150px;
+}
+.card-body .flex_contents{
+    display: flex;
+    justify-content: space-between;
+}
