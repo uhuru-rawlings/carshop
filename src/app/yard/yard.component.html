@@ -7,6 +7,9 @@
                     <div class="form-group" id="form-group">
                         <select name="sortby" class="form-control shadow-none" id="sortby">
                             <option value="">--sort by--</option>
+                            <ng-container *ngFor="let model of carmodels">
+                                <option value="{{ model.modelname }}">{{ model.modelname }}</option>
+                            </ng-container>
                         </select>
                     </div>
                     <div class="form-group">
