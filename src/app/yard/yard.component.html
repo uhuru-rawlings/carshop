@@ -17,3 +17,21 @@
         </div>
     </div>
 </div>
+<div class="carssections">
+    <div class="container">
+        <div class="car_cards">
+            <div class="card" *ngFor="let car of cars">
+                <div class="images" *ngFor="let image of images" >
+                    <img *ngIf="image.id == car.id" src="https://res.cloudinary.com/dwvjgc2l0/{{ image.carimages }}" height="100%" width="100%" alt="">
+                </div>
+                <div class="card-body">
+                    <div class="flex_contents">
+                        <div class="models">{{ car.carmodel.modelname }}</div>
+                         <div class="seats">{{ car.seats }} seats</div>
+                    </div>
+                    <div class="engines">{{ car.engines_cc }} cc</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

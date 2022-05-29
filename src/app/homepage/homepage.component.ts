@@ -9,6 +9,7 @@ import { HomeService } from '../services/home.service';
 export class HomepageComponent implements OnInit {
   models:any;
   cars:any;
+  images:any;
   constructor(private homeservice:HomeService) { }
 
   ngOnInit(): void {
@@ -23,6 +24,9 @@ export class HomepageComponent implements OnInit {
     })
     this.homeservice.getCars().subscribe((data)=> {
       this.cars = data
+    })
+    this.homeservice.getImages().subscribe((data) => {
+      this.images = data
     })
   }
 }
