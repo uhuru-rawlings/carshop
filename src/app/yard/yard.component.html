@@ -5,10 +5,10 @@
             <div class="search">
                 <form method="post">
                     <div class="form-group" id="form-group">
-                        <select name="sortby" class="form-control shadow-none" id="sortby">
+                        <select name="sortby" (change)="onChangeSort($event)" class="form-control shadow-none" id="sortby">
                             <option value="">--sort by--</option>
-                            <ng-container *ngFor="let model of carmodels">
-                                <option value="{{ model.modelname }}">{{ model.modelname }}</option>
+                            <ng-container *ngFor="let image of carmodels">
+                                <option value="{{ image.car_id.carmodel.modelname }}">{{ image.car_id.carmodel.modelname }}</option>
                             </ng-container>
                         </select>
                     </div>
@@ -20,19 +20,39 @@
         </div>
     </div>
 </div>
+<div class="carssection" *ngIf="cars.length > 0">
+    <div class="container">
+        <div class="car_cards">
+            <div class="card" *ngFor="let image of cars">
+                    <div class="images">
+                        <img src="https://res.cloudinary.com/dwvjgc2l0/{{ image.carimages }}" height="100%" width="100%" alt="">
+                    </div>
+                <div class="card-body">
+                    <div class="flex_contents">
+                        <div class="models">Car model: {{ image.car_id.carmodel.modelname }}</div>
+                         <div class="seats">No. seats{{ image.car_id.seats }}</div>
+                    </div>
+                    <div class="engines">Engine Power {{ image.car_id.engines_cc }} cc</div>
+                    <div class="seemorebtn"><button id="buttonss">see details</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="carssections">
     <div class="container">
         <div class="car_cards">
-            <div class="card" *ngFor="let car of cars">
-                <div class="images" *ngFor="let image of images" >
-                    <img *ngIf="image.id == car.id" src="https://res.cloudinary.com/dwvjgc2l0/{{ image.carimages }}" height="100%" width="100%" alt="">
-                </div>
+            <div class="card" *ngFor="let image of images">
+                    <div class="images">
+                        <img src="https://res.cloudinary.com/dwvjgc2l0/{{ image.carimages }}" height="100%" width="100%" alt="">
+                    </div>
                 <div class="card-body">
                     <div class="flex_contents">
-                        <div class="models">{{ car.carmodel.modelname }}</div>
-                         <div class="seats">{{ car.seats }} seats</div>
+                        <div class="models">Car model: {{ image.car_id.carmodel.modelname }}</div>
+                         <div class="seats">No. seats{{ image.car_id.seats }}</div>
                     </div>
-                    <div class="engines">{{ car.engines_cc }} cc</div>
+                    <div class="engines">Engine Power {{ image.car_id.engines_cc }} cc</div>
+                    <div class="seemorebtn"><button id="buttonss">see details</button></div>
                 </div>
             </div>
         </div>

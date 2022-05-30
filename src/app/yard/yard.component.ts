@@ -13,6 +13,20 @@ export class YardComponent implements OnInit {
   constructor(private homeservice:HomeService) { }
 
   ngOnInit(): void {
+    this.setCars()
+  }
+
+  onChangeSort(event:any){
+     let values = event.target.value
+     if(values){
+      let filter_array:any = []
+      this.images.forEach((item:any) => {
+        if(item.car_id.carmodel.modelname == values){
+          filter_array.push(item)
+          this.cars = filter_array
+        }
+      })
+     }
   }
 
   setCars(){
@@ -20,10 +34,11 @@ export class YardComponent implements OnInit {
       this.cars = data
     })
     this.homeservice.getImages().subscribe((data) => {
-      this.images = data 
-    })
-    this.homeservice.carModels().subscribe((data) => {
+      this.images = data
       this.carmodels = data
     })
+    // this.homeservice.carModels().subscribe((data) => {
+    //   this.carmodels = data
+    // })
   }
 }

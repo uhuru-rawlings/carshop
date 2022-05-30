@@ -10,3 +10,9 @@ body{
 #subtitles{
     font-weight: bold;
 }
+#buttons{
+    border-radius: 0;
+}
+.form-control{
+    border-radius: 0;
+}

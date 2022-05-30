@@ -11,5 +11,6 @@ nav a button{
     /* color: #EFF3F6; */
 }
 #logins{
-    border:2px solid #813B16;
+    border:1px solid #813B16;
+    border-radius: 0;
 }

@@ -26,6 +26,7 @@
     font-size: 20px;
     border: 2px solid #813B16;
     transition: 2s;
+    border-radius: 0;
 }
 .buttons a button:hover{
     color: #813B16;
@@ -81,6 +82,8 @@
 .companies .container{
     display: flex;
     flex-wrap: wrap;
+    padding-top: 40px;
+    padding-bottom: 40px;
     column-gap: 20px;
     row-gap: 20px;
 }
@@ -95,7 +98,12 @@
     row-gap: 20px;
 }
 .car_cards .card{
-    min-width: 250px;
+    width: 250px;
+    border: none;
+    transition: 2s ease-out;
+}
+.car_cards .card:hover{
+    box-shadow: 4px 4px 8px rgba(31,31,31,0.3);
 }
 .car_cards .card .images{
     width: 100%;
@@ -104,4 +112,14 @@
 .card-body .flex_contents{
     display: flex;
     justify-content: space-between;
+}
+.car_cards .card .card-body{
+    font-weight: 300;
+    font-style: italic;
+    font-size: 14px;
+}
+.car_cards .card #buttons{
+    border: none;
+    background-color: #813B16;
+    color: #EFF3F6;
 }
