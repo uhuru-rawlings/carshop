@@ -13,14 +13,40 @@
                         <img src="https://res.cloudinary.com/dwvjgc2l0/{{ image.carimages }}" height="100%" width="100%" alt="">
                     </div>
                 <div class="card-body">
-                    <div class="flex_contents">
-                        <div class="models">Car model: {{ image.car_id.carmodel.modelname }}</div>
-                         <div class="seats">No. seats{{ image.car_id.seats }}</div>
-                    </div>
+                    <div class="models">Car model: {{ image.car_id.carmodel.modelname }}</div>
+                    <div class="seats">No. seats{{ image.car_id.seats }}</div>
+                    <div class="dimensions">car dimensions: {{ image.car_id.dimension_length }} x {{ image.car_id.dimension_width }} x {{ image.car_id.dimension_height }} (mm)</div>
                     <div class="engines">Engine Power {{ image.car_id.engines_cc }} cc</div>
-                    <div class="seemorebtn"><a routerLink="/details"><button id="buttonss">see details</button></a></div>
+                    <div class="transmission">Transmission: {{ image.car_id.transmision }}</div>
+                    <div class="weight">Weight capacity: {{ image.car_id.capacity_weight }} (kg)</div>
+                    <div class="price">Price: kshs.{{ image.car_id.price | number}}</div>
+                    <div class="flex_options">
+                        <div class="seemorebtn"><button id="buttonss">Book Drive</button></div>
+                        <div class="seemorebtn"><button id="buttonss">Purchase Car</button></div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="darkbackground">
+    <div class="whitebackground">
+        <form method="post" autocomplete="off">
+            <div class="form-group">
+                <label for="drivedate">Drive Date</label>
+                <input type="date" [(ngModel)]="drivedate" name="drivedate" id="drivedate"class="form-control shadow-none">
+            </div>
+            <div class="form-group">
+                <label for="driver">Need Driver</label>
+                <select name="driver" [(ngModel)]="driver" id="driver" class="form-control shadow-none">
+                    <option value="">-- select option --</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn" value="Book Drive" id="buttons">
+            </div>
+        </form>
     </div>
 </div>

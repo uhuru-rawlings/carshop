@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DetailsService } from '../services/details.service';
 import { HomeService } from '../services/home.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class YardComponent implements OnInit {
   cars:any;
   images:any;
   carmodels:any;
-  constructor(private homeservice:HomeService) { }
+  constructor(private homeservice:HomeService, private detailservice:DetailsService) { }
 
   ngOnInit(): void {
     this.setCars()
@@ -40,5 +41,9 @@ export class YardComponent implements OnInit {
     // this.homeservice.carModels().subscribe((data) => {
     //   this.carmodels = data
     // })
+  }
+
+  setDetails(details:any){
+    this.detailservice.getItmes(details)
   }
 }

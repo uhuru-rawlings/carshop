@@ -1,0 +1,54 @@
+.card-body{
+    font-style: italic;
+    font-size: 14px;
+}
+.flex_options{
+    display: flex;
+    justify-content: space-between;
+}
+.seemorebtn #buttonss{
+    border: none;
+    background-color: #813B16;
+    color: #EFF3F6;
+}
+.car_cards{
+    width: 70%;
+    margin: auto;
+    margin-top: 40px;
+}
+.card .images{
+    width: 100%;
+    height: 400px;
+}
+.darkbackground{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(31,31,31,0.5);
+}
+.whitebackground{
+    width: 40%;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: #EFF3F6;
+}
+.whitebackground form{
+    padding: 30px;
+}
+.whitebackground form .form-control{
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #813B16;
+    background-color: inherit;
+}
+#buttons{
+    border: none;
+    background-color: #813B16;
+    color: #EFF3F6;
+}
+.form-group{
+    margin-bottom: 15px;
+}
