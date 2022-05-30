@@ -6,6 +6,7 @@
 }
 body{
     overflow-x: hidden;
+    position: relative;
 }
 #subtitles{
     font-weight: bold;

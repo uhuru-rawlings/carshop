@@ -11,6 +11,7 @@ export class DetailsComponent implements OnInit {
   image:any;
   drivedate:any;
   driver:any;
+  shows:any = ''
   constructor(private detailsservice:DetailsService, private toastr:ToastrService) { }
   ngOnInit(): void {
     this.setItems()
@@ -19,8 +20,14 @@ export class DetailsComponent implements OnInit {
   setItems(){
     this.image = this.detailsservice.item
   }
+  showForms(){
+    this.shows = 'show'
+  }
+  hideForms(){
+    this.shows = ''
+  }
 
-  bookTestDrive(car_id:any){
+  bookTestDrive(){
     if(this.drivedate === '' || this.driver === ''){
       this.toastr.error("Please fillout all required fields.")
     }else{

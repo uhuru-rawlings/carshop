@@ -52,3 +52,6 @@
 .form-group{
     margin-bottom: 15px;
 }
+.darkbackground{
+    display: none;
+}
