@@ -17,7 +17,7 @@ import { YardComponent } from './yard/yard.component';
     routingLinks,
     NavbarComponent,
     ContactComponent,
-    YardComponent
+    YardComponent,
   ],
   imports: [
     BrowserModule,

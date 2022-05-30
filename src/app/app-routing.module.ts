@@ -6,6 +6,7 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
 import { HomepageComponent } from './homepage/homepage.component';
 import { ContactComponent } from './contact/contact.component';
 import { YardComponent } from './yard/yard.component';
+import { DetailsComponent } from './details/details.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'resetpassword',component:ResetpasswordComponent},
   {path:'contact',component:ContactComponent},
   {path:'yard',component:YardComponent},
+  {path:'details',component:DetailsComponent},
 ];
 
 @NgModule({
@@ -23,4 +25,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingLinks = [LoginComponent,SignupComponent,ResetpasswordComponent,HomepageComponent,ContactComponent,YardComponent]
+export const routingLinks = [LoginComponent,SignupComponent,ResetpasswordComponent,HomepageComponent,ContactComponent,YardComponent,DetailsComponent]

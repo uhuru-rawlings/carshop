@@ -23,7 +23,7 @@ export class YardComponent implements OnInit {
       this.images.forEach((item:any) => {
         if(item.car_id.carmodel.modelname == values){
           filter_array.push(item)
-          this.cars = filter_array
+          this.images = filter_array
         }
       })
      }
