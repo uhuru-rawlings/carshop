@@ -22,7 +22,7 @@
                     <div class="price">Price: kshs.{{ image.car_id.price | number}}</div>
                     <div class="flex_options">
                         <div class="seemorebtn"><button (click)="showForms()"id="buttonss">Book Drive</button></div>
-                        <div class="seemorebtn"><button id="buttonss">Purchase Car</button></div>
+                        <div class="seemorebtn"><a routerLink="/payments"><button id="buttonss">Purchase Car</button></a></div>
                     </div>
                 </div>
             </div>
