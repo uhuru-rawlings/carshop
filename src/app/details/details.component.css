@@ -52,6 +52,18 @@
 .form-group{
     margin-bottom: 15px;
 }
-.darkbackground{
+/* .darkbackground{
     display: none;
+} */
+.whitebackground .close{
+    font-size: 25px;
+    /* border: 1px solid #000; */
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    border-radius: 50%;
+    align-items: center;
+    cursor: pointer;
 }

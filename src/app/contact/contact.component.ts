@@ -27,6 +27,7 @@ export class ContactComponent implements OnInit {
       }
       this.contactservice.contactUs(details).subscribe((data) => {
         if(data.success){
+          this.toastr.success(data.success)
           this.success = data.success
           this.phonenumber = ''
           this.useremail = ''
